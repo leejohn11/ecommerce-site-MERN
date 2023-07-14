@@ -7,6 +7,9 @@ export const registerController= async(req,res)=>{
         if(!email){
             return res.send({error:'email is req'})
         }
+        if(!password){
+            return res.send({error:'password is req'})
+        }
     } catch (error) {
         console.log(error)
         res.status(500).send({
