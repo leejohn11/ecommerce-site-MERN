@@ -1,6 +1,6 @@
 export const registerController= async(req,res)=>{
     try {
-        const {name,email,password,phone,addess} =req.body
+        const {name,email,password,phone,address} =req.body
         if(!name){
             return res.send({error:'Name is req'})
         }
@@ -12,6 +12,9 @@ export const registerController= async(req,res)=>{
         }
         if(!phone){
             return res.send({error:'phone is req'})
+        }
+        if(!address){
+            return res.send({error:'address is req'})
         }
     } catch (error) {
         console.log(error)
